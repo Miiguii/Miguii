@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: 'Poppins',cursive;
+}
+body{
+    /* color: azure; */
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ 
+    background-color: black; 
+    /* padding-top: -30; */
+}
+:root {
+    --dark-color: #000;
+  }
+.night {
+    z-index: -1;
+    position: absolute;
+    background:fixed;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    filter: blur(0.1vmin);
+    background-image: radial-gradient(
+        ellipse at top,
+        transparent 0%,
+        var(--dark-color)
+      ),
+      radial-gradient(
+        ellipse at bottom,
+        var(--dark-color),
+        rgba(145, 233, 255, 0.2)
+      ),
+      repeating-linear-gradient(
+        220deg,
+        rgb(0, 0, 0) 0px,
+        rgb(0, 0, 0) 19px,
+        transparent 19px,
+        transparent 22px
+      ),
+      repeating-linear-gradient(
+        189deg,
+        rgb(0, 0, 0) 0px,
+        rgb(0, 0, 0) 19px,
+        transparent 19px,
+        transparent 22px
+      ),
+      repeating-linear-gradient(
+        148deg,
+        rgb(0, 0, 0) 0px,
+        rgb(0, 0, 0) 19px,
+        transparent 19px,
+        transparent 22px
+      ),
+      linear-gradient(90deg, pink, rgb(240, 240, 240));
+  }
+  
+.icon-button img {
+    width: 50px; /* Ajusta el tamaño del ícono */
+    height: 50px;
+}
+
+.icon-button {
+    display: inline-block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.botones{
+    margin: 10px;
+    padding: 10px 20px ;
+    border-radius: 80px;
+    background-color: pink;
+    border: none;
+}
+
+
+
+.botones a:focus{
+    background-color: rgb(232, 199, 36);
+}
+
+.greetings{
+    font-size: 7rem;
+    font-weight: 900;
+}
+.greetings > span{
+    animation: glow 6s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px pink, 0 0 50px pink, 0 0 100px pink;
+    }
+    30%, 70%{
+        color: #111;
+        text-shadow: none;
+    }
+
+}
+/* .greetings > span:nth-child(1){
+    animation-delay: .2s ;
+    animation-duration: 4s ;
+} */
+.greetings > span:nth-child(2){
+    animation-delay: .3s ;
+    animation-duration: 6s ;
+}
+.greetings > span:nth-child(3){
+    animation-delay: .6s ;
+    animation-duration: 6s ;
+}
+.greetings > span:nth-child(4){
+    animation-delay: .9s;
+    animation-duration: 6s ;
+}
+.greetings > span:nth-child(5){
+    animation-delay: 1.2s;
+    animation-duration: 6s ;
+}
+.greetings > span:nth-child(6){
+    animation-delay: 1.5s;
+    animation-duration: 6s ;
+}
+.greetings > span:nth-child(7){
+    animation-delay: 1.8s;
+    animation-duration: 6s ;
+ 
+}
+.description{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: pink;
+}
+
+.button a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #111;
+}
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 4rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    .description{
+        font-size: 2rem;
+    }
+    
+    .button a{
+        font-size: 1rem;
+    }
+}
